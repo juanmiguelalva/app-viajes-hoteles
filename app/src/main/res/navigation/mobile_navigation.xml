@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_inicio">
+    <fragment
+        android:id="@+id/nav_inicio"
+        android:name="com.example.app_grupo04.InicioFragment"
+        android:label="Inicio"
+        tools:layout="@layout/fragment_inicio">
+        <action
+            android:id="@+id/action_nav_inicio_to_nav_hoteles"
+            app:destination="@id/nav_hoteles"
+            app:popUpTo="@+id/nav_editarTurista"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_nav_inicio_to_nav_vuelos"
+            app:destination="@id/nav_vuelos"
+            app:popUpTo="@+id/nav_editarTurista"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_editarTurista"
+        android:name="com.example.app_grupo04.EditarTuristaFragment"
+        android:label="Editar Datos"
+        tools:layout="@layout/fragment_editar_turista" />
+
+    <fragment
+        android:id="@+id/nav_vuelos"
+        android:name="com.example.app_grupo04.VuelosFragment"
+        android:label="Vuelos Disponibles"
+        tools:layout="@layout/fragment_vuelos" >
+        <action
+            android:id="@+id/action_nav_vuelos_to_nav_hoteles"
+            app:popUpTo="@+id/nav_vuelos"
+            app:popUpToInclusive="true"
+            app:destination="@id/nav_hoteles" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_hoteles"
+        android:name="com.example.app_grupo04.HotelesFragment"
+        android:label="Hoteles Disponibles"
+        tools:layout="@layout/fragment_hoteles" />
+    <fragment
+        android:id="@+id/nav_vuelosturista"
+        android:name="com.example.app_grupo04.VuelosTuristaFragment"
+        android:label="Mis Vuelos"
+        tools:layout="@layout/fragment_vuelos_turista" />
+
+</navigation>

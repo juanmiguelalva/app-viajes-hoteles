@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:id="@+id/grp1" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_inicio"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="Inicio" />
+        <item
+            android:id="@+id/nav_vuelos"
+            android:icon="@drawable/ic_baseline_airplane_ticket_24"
+            android:title="Vuelos" />
+        <item
+            android:id="@+id/nav_hoteles"
+            android:icon="@drawable/vector_hoteles"
+            android:title="Hoteles" />
+    </group>
+        <group android:id="@+id/grp2" android:checkableBehavior="single">
+            <item
+                android:id="@+id/nav_vuelosturista"
+                android:icon="@drawable/destino"
+                android:title="Mis Vuelos" />
+            <item
+                android:id="@+id/nav_editarTurista"
+                android:icon="@drawable/ic_perfil"
+                android:title="Perfil" />
+        </group>
+</menu>
